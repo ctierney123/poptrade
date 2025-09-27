@@ -19,7 +19,7 @@ cargo build --release
 
 ### 2. Run the token tracker
 ```bash
-cargo run
+cargo run --bin poptrade
 ```
 
 ## What it does
