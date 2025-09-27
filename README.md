@@ -8,7 +8,7 @@
 
 ## Prerequisites
 
-- **Rust**: You need to have Rust installed on your system. Install it from [rustup.rs](https://rustup.rs/)
+- **Rust**: You need to have Rust installed on your system. Install it from https://rust-lang.org/
 
 ## Running the Application
 
