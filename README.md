@@ -1,6 +1,10 @@
 # PopTrade
 
- tool to scrape & aggregate brand new SOL-based cryptocurrencies published on pump.fun, from ~$~0-80k market cap, with a simple command prompt ui, written in rust. ~24 hour project written in september 2025. MIT License. 
+ tool to scrape & aggregate brand new SOL-based cryptocurrencies published on pump.fun, from ~$0-80k market cap, with a simple command prompt ui, written in rust. ~24 hour project written in september 2025. MIT License. Tested only in Windows 10.0.19045.
+
+
+![UI Screenshot](example.png)
+
 
 ## Prerequisites
 
@@ -35,3 +39,8 @@ Runs a real-time cryptocurrency token tracker that monitors tokens exclusively w
 Once running, the application will display real-time token information in your terminal, and (work in progress) start up a web server for API access.
 
 Press `Ctrl+C` to stop the application.
+
+## Known Bugs
+
+- Stale text lingering in the "live transactions" section
+- Upper border has lingering old text if the command prompt window is resized during use
