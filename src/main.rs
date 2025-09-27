@@ -26,9 +26,6 @@ use axum::{
 use tower::ServiceBuilder;
 use tower_http::cors::CorsLayer;
 
-// Paper trading modules
-// mod paper_trading;
-// mod paper_main;
 
 // --- Parquet Exporting Module ---
 use std::fs;
@@ -2074,16 +2071,7 @@ async fn run_websocket_connection_with_api(
 
 #[tokio::main]
 async fn main() {
-    let args: Vec<String> = std::env::args().collect();
-    
-    if args.len() > 1 && args[1] == "paper" {
-        // Run paper trading bot
-        println!("🚀 Starting Paper Trading Bot...");
-        if let Err(e) = paper_main::PaperTradingApp::new().run().await {
-            eprintln!("❌ Paper trading error: {}", e);
-        }
-    } else {
-        // Run original token tracker with API server
+    // Run token tracker with API server
         let mut retry_count = 0;
         let max_retries = 10;
         let mut tokens: HashMap<String, TokenInfo> = HashMap::new();
@@ -2135,7 +2123,6 @@ async fn main() {
         
         // Shutdown API server
         api_server_handle.abort();
-    }
 }
 
 fn display_token_table(tokens: &HashMap<String, TokenInfo>, message_count: u32) {
